@@ -1,3 +1,4 @@
 # UW Lecture Reviews
 
-Please open with [typora](https://typora.io)
+For files that contain LaTeX, please open with [typora](https://typora.io)
+
