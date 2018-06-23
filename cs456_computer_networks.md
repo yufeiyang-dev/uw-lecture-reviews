@@ -55,7 +55,7 @@
   - (1) that sockets have unique identifiers, and
   - (2) that each segment have special fields that indicate the socket to which the segment is to be delivered. These special fields are the __source port number field__ and the __destination port number firld__.
 
-  <img src="/Users/stevenfly/Documents/git_github/uw-lecture-reviews/cs456_computer_networks.assets/tranport_layer_segment.png" width="600px"/>
+  <img src="./cs456_computer_networks.assets/tranport_layer_segment.png" width="600px"/>
 
   
 
@@ -93,7 +93,7 @@ connectionSocket, addr = serverSocket.accept();
 
 ### 3.3.1 UDP Segment Structure
 
-<img src="/Users/stevenfly/Documents/git_github/uw-lecture-reviews/cs456_computer_networks.assets/udp_segment.png" width="700px"/>
+<img src="./cs456_computer_networks.assets/udp_segment.png" width="700px"/>
 
 ### 3.3.2 UDP Checksum
 
@@ -116,7 +116,7 @@ connectionSocket, addr = serverSocket.accept();
 
 - We first consider the simplest case, in which the underlying channel is completely reliable. The protocol itself, which we w'll call `rdt1.0` , is trivial. The __finite-state machine (FSM)__ definitions for the `rdt1.0` sender and receiver are shown below. It is important to note that there are `separate` FSMs for the sender and for the receiver.
 
-<img src="/Users/stevenfly/Documents/git_github/uw-lecture-reviews/cs456_computer_networks.assets/rdt_1.png" width="500px"/>
+<img src="./cs456_computer_networks.assets/rdt_1.png" width="500px"/>
 
 - In this simple protocol, there is no difference between a unit of data and a packet. Also, all packet flow is from the sender to receiver; there is no need to provide and feedback from both ends. We also assumed that the receiver is able to receive data as fast as the sender happened two deaf data.
 
@@ -130,7 +130,7 @@ connectionSocket, addr = serverSocket.accept();
   - *Receiver feedback*. `rdt2.0` protocol send positive (ACK) and negative (NAK) acknowledgement packets back from the receiver to the sender. These packets need only be one bit long.
   - *Retransmission*. A packet that is received in error at the receiver will be retransmitted by the sender.
 
-  <img src="/Users/stevenfly/Documents/git_github/uw-lecture-reviews/cs456_computer_networks.assets/rdt2.png" width="600px"/>
+  <img src="./cs456_computer_networks.assets/rdt2.png" width="600px"/>
 
 - When the `rdt_send(data)` event occurs, the sender will create a packet (`sndpkt`) containing the data to be sent, along with a packet checksum and then send the packet via the `udt_send(sndpkt)` operation.
 
