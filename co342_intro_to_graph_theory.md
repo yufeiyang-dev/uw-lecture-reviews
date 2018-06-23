@@ -108,13 +108,13 @@
 
 ## 11. Vector Spaces for Graphs
 
-- __Definition:__ The __edge space__ of G, denoted $\varepsilon(G)$, is the set of vectors of the form $GF(2)^{E(G)}$.
+- __Definition:__ The __edge space__ of G, denoted $\mathcal{E}(G)$, is the set of vectors of the form $GF(2)^{E(G)}$.
 
 ## 12. Cut Space
 
 - __Definition:__ The cut space of G is the set of all cuts in G, denoted $C^*(G)$.
 
-- __Proposition:__ $C^*(G)$ is a subspace of $\varepsilon(G)$.
+- __Proposition:__ $C^*(G)$ is a subspace of $\mathcal{E}(G)$.
 
 - __Proposition:__ The set of all bonds span $C^*(G)$.
 
@@ -134,7 +134,7 @@
 - __Theorem:__ Elements of the cycle space $C(G)$ are precisely the even subgraphs of G.
 - __Definition:__ Let G be connected and T is a spanning tree in G. For any edge $e \in E(G)\backslash E(T)$, the unique cycle in $T+e$ is called a __fundemental cycle__, denoted $C_e$.
 - __Corollary:__ If G is connected, then $\dim C(G) = |E(G)|-|V(G)| +1$.
-- __Corollary:__ If G has k components, then $\dim C(G) = |E(G)|-|V(G)| + k$.
+- __Corollary:__ If G has k components, then $\dim \mathcal{C}(G) = |E(G)|-|V(G)| + k​$.
 
 ## 14. Orthogonal Complements
 
@@ -143,4 +143,32 @@
 
 ## 15. Planar Graphs
 
-- 
+- __Definition:__ A graph is __planar__ if it can be drawn on the plane so that edges only interact at common endpoints. The drawing is called a __planar embedding__. We call a planar embedding of a graph a __plane graph__. We use __points__ and __lines__ to refer to the representation of vertices and edges in the embedding, respectively.
+- __Definition:__ A __curve__ is the continuous image of a closed unit line segment.
+- __Definition:__ A __closed curve__ is the continuous image of a unit circle. An embedding of a cycle is a closed curve on the plane. A curve is simple if it does not intersect itself (i.e. mapping is 1-1).
+- __Definition:__ A set of points is __arcwise-connected__ if any two of its points form the endpoints of a curve that is entirely in the set.
+- __Jordan Curve Theorem:__ Any simple closed curve in the plane partitions the rest of the plane into two disjoint arcwise-connected open sets, one inside and one outside.
+- __Definition:__ Given a simple closed curve $C$, the points inside is its **interior**, denote this open set by $int(C).$ The points outside is its **exterior**, denoted $ext(C)$. Together with $C$, we call them $Int(C)$ and $Ext(C)$ (closed sets).
+- __Theorem:__ $K_5$ is not planar.
+- __Theorem:__ $K_{3,3}$ is not planar.
+- __Definition:__ A **subdivision** of $G$ is obtained from $G$ by replacing each edge with a new path of length at least 1 (i.e. introduce new vertices of degree 2 to the edges)
+- **Proposition:** $G$ is planar if and only if every subdivision of $G$ is planar.
+- **Corollary:** Any graph containing a subdivision of $K_5$ or $K_{3,3}$ is not planar.
+
+## 16. Faces
+
+- **Definition:** A **face** in a planar embedding is a maximal subset of points that are arcwise-connected and do not include any part of the embedding. Every planar embedding has one **unbounded face** or **outer face**. Each dace is **incident** with the vertices and edges on its boundary. Two faces are **adjacent** if they share at least one edge/line on their boundaries.
+- **Theorem:** In a 2-connected plane graph $G$, each face is bounded by a cycle.
+- __Proposition:__ The cycle space of a 2-connected plane graph $G$ is spanned by the set of all facial cycles of $G$.
+- **Definition:** A **2-basis** of a subspace of $\mathcal{E}(G)$ is a basis $\mathcal{B}$ where each edge in $G$ is in at most 2 elements of $\mathcal{B}$.
+- **Corollary:** In a 3-connected plane graph, all neighbours of a vertex lie on a common cycle.
+
+## 17. Duel
+
+- __Definition:__ Given a plane graph $G$, define the **dual** of $G$, denoted $G^*$, as follows: each face $f$ of $G$ corresponds to a vertex $f^*$ in $G^*$; for each edge of $G$ that has faces $f$ and $g$ on its two sides, there is a corresponding edge $e^*$ in $G^*$ that joins $f^*$ with $g^*$.
+- **Proposition:** If $G$ is a plane graph, then $G^*$ is planar.
+- **Proposition:** The dual of any plane graph is connected.
+- **Proposition:** If $G$ is a connected plane graph, then $G = G^{**}$.
+- **Proposition:** Let $G$ be a connected plane graph, and let $e \in E(G)$. If $e$ is not a cut-edge, then $(G-e)^*=G^*/e^*$. If $e$ is not a loop, then $(G/e)^*=G^*-e^*$.
+- **Theorem:** Let $G$ be a connected plane graph. If $C$ is a cycle in $G$, then $C^*$ is a bond in $G^*$. If $B$ is a bond in $G$, then $B^*$ is a cycle in $G^*$.
+- **Corollary:** For a connected plane graph $G$, $\mathcal{C}(G) = \mathcal{C}^*(G^*)$ and $\mathcal{C}^*(G) = \mathcal{C}(G^*)$.
