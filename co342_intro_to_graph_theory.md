@@ -101,7 +101,7 @@
 
 - __Definition:__ A __wheel__ $w_n$ is a cycle of length n with another vertex joined to all vertices of the cycle.
 
-- __Theorem (Tutte's Wheel Theorem): __ A graph G is a simple 3-connected graph if and only ig there exists a sequence of simple graphs $G_0, G_1, …, G_k$ such that
+- __Theorem (Tutte's Wheel Theorem): __ A graph G is a simple 3-connected graph if and only if there exists a sequence of simple graphs $G_0, G_1, …, G_k$ such that
 
   1. $G_0$ is a wheel, $G_k = G$;
   2. for $0 \leq i \leq k-1$, there is an edge $e \in G_{i+1}$ such that $G_i = G_{i+1} - e$ or $G_i = G_{i+1}/e$.
@@ -163,12 +163,47 @@
 - **Definition:** A **2-basis** of a subspace of $\mathcal{E}(G)$ is a basis $\mathcal{B}$ where each edge in $G$ is in at most 2 elements of $\mathcal{B}$.
 - **Corollary:** In a 3-connected plane graph, all neighbours of a vertex lie on a common cycle.
 
-## 17. Duel
+## 17. Duals
 
 - __Definition:__ Given a plane graph $G$, define the **dual** of $G$, denoted $G^*$, as follows: each face $f$ of $G$ corresponds to a vertex $f^*$ in $G^*$; for each edge of $G$ that has faces $f$ and $g$ on its two sides, there is a corresponding edge $e^*$ in $G^*$ that joins $f^*$ with $g^*$.
 - **Proposition:** If $G$ is a plane graph, then $G^*$ is planar.
 - **Proposition:** The dual of any plane graph is connected.
 - **Proposition:** If $G$ is a connected plane graph, then $G = G^{**}$.
 - **Proposition:** Let $G$ be a connected plane graph, and let $e \in E(G)$. If $e$ is not a cut-edge, then $(G-e)^*=G^*/e^*$. If $e$ is not a loop, then $(G/e)^*=G^*-e^*$.
-- **Theorem:** Let $G$ be a connected plane graph. If $C$ is a cycle in $G$, then $C^*$ is a bond in $G^*$. If $B$ is a bond in $G$, then $B^*$ is a cycle in $G^*$.
+- **Theorem:** Let $G​$ be a connected plane graph. If $C​$ is a cycle in $G​$, then $C^*​$ is a bond in $G^*​$. If $B​$ is a bond in $G​$, then $B^*​$ is a cycle in $G^*​$.
 - **Corollary:** For a connected plane graph $G$, $\mathcal{C}(G) = \mathcal{C}^*(G^*)$ and $\mathcal{C}^*(G) = \mathcal{C}(G^*)$.
+
+## 18. Abstract Duals
+
+- __Definition:__ Let $G$ be a graph. Then $G^*$ is an **abstract dual** of $G$ if $G$ and $G^*$ have the same edge set, and the cycles of $G$ is equal to the bonds of $G^*$, and the bonds of $G$ is equal to the cycles of $G^*$.
+- **Theorem:** If $G^*$ is an abstract dual of $G$, then $\mathcal{C}(G) = \mathcal{C}^*(G^*)$ and $\mathcal{C}^*(G) = \mathcal{C}(G^*)$. (connectedness is not required)
+- **Corollary:** If $G^*$ is an abstract dual of $G$, then $G$ is an abstract dual of $G^*$.
+
+## 19. Bridges
+
+- **Definition:** Let $H$ be a subgraph of a connected graph $G$. A **bridge** of $H$ is either
+  1. a component $J$ of $G-V(H)$ together with the edges in $\delta_G(V(H))$ and their endpoints; or
+  2. an edge not in $H$ joining two vertices in $V(H)$. "trivial bridge"
+- **Definition:** For a bridge $B$ of $H$, the vertices in both $B$ and $H$ are the **vertices of attachment**. The remaining vertices of $B$ are **internal** vertices. A bridge with $k$ $VOA$ is called a **k-bridge**. Two bridges with the same $VOA$ are **equivalent**.
+- **Definition:** Let $C$ be a cycle. If a bridge has $k$ $VOA$, then they partition $C$ into $k$ **segments**. Two bridges **avoid** each other if the $VOA$ of one bridge is entirely within a segment of the other bridge. Otherwise they **overlay**. 
+- **Definition:** Two bridges are **skew** if there is a sequence of distinct vertices $v_1, v_2, v_3, v_4$ on $C$ in cyclic order such that $v_1,v_3$ are the $VOA$ of one bridge, and $v_2,v_4$ are the $VOA$ of the other bridge.
+- **Proposition:** Overlapping bridges of $C$ are either skew or equivalent 3-bridges.
+- **Given plane graph $G$, cycle $C$:** Each bridge of $C$ is connected, so they are either in $Int(C)$or in $Ext(C)$, by the Jordan Curve Theorem. Bridges in $Int(C)$ are **inner** bridges, bridges in $Ext(C)$ are **outer** bridges.
+- **Theorem:** If $G$ is a plane graph and $C$ is a cycle of $G$, then the inner (outer) bridges of $C$ avoid one another.
+- **Definition:** In a subdivision, the **branch** vertices are the one of degree at least 3.
+
+## 20. 3-connected planar graphs
+
+- **Definition:** Two planner embeddings of $G$ are **equivalent** if they have the same sets of edges as face boundaries. A planar graph $G$ has a **unique embedding** if every embedding of $G$ is equivalent.
+- **Definition:** A cycle $C$ is an **induced non-separating cycle** of $G$ if $C$ is an induced cycle and $G-V(C)$ is connected.
+- **Theorem:** A cycle $C$ in a 3-connected plane graph $G$ is facial cycle if and only if $C$ is an induced non-separating cycle of $G$.
+- **Corollary:** Every 3-connected planar graph has a unique embedding.
+- **Corollary:** Every 3-connected planar graph has a unique dual graph.
+
+## Kuratowski's Theorem
+
+- **Definition:** We cal subdivisions of $K_5$ and $K_{3,3}$ **Kuratowski subgraphs** (KS).
+
+- **Theorem:** If $G$ is not planar, then $G$ contains a Kuratowski subgraph.
+
+  
