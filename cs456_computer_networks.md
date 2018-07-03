@@ -1,7 +1,3 @@
-# Chapter 2: Application Layer
-
-
-
 # Chapter 3: Transport Layer
 
 - understand
@@ -227,3 +223,7 @@ connectionSocket, addr = serverSocket.accept();
   - *Data received from above*. When data is received from above, the SR sender checks the next available sequence number for the packet
 
   ...
+
+## 3.7 TCP Congestion Control
+
+- 

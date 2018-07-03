@@ -202,7 +202,7 @@
 
 ## Kuratowski's Theorem
 
-- **Definition:** We cal subdivisions of $K_5$ and $K_{3,3}$ **Kuratowski subgraphs** (KS).
+- **Definition:** We call subdivisions of $K_5$ and $K_{3,3}$ **Kuratowski subgraphs** (KS).
 
 - **Theorem:** If $G$ is not planar, then $G$ contains a Kuratowski subgraph.
 
