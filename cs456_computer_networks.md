@@ -140,15 +140,15 @@ connectionSocket, addr = serverSocket.accept();
 
 - A simple solution to this new problem is to add a new field to the data packet and have the sender number its data packets by putting a **sequence number** into this field.
 
-  [image for `rdt2.1` sender (p.211)]
+<img src="./cs456_computer_networks.assets/rdt_2_1_sender.png" width="600px"/>
 
-  [image for `rdt2.1` receiver (p.212)]
+<img src="./cs456_computer_networks.assets/rdt_2_1_receiver.png" width="600px"/>
 
 - When an out-of-order packet is received, the receiver sends a positive acknowledgment for the packet it has received. When a corrupted packet is received, the receiver sends a negative acknowledgement.
 
-  [image for `rdt2.2` sender (p.213)]
+  <img src="./cs456_computer_networks.assets/rdt_2_2_sender.png" width="600px"/>
 
-  [image for `rdt2.2` receiver (p.214)]
+  <img src="./cs456_computer_networks.assets/rdt_2_2_receiver.png" width="600px"/>
 
 - We can accomplish the same effect as a NAK if, instead of sending a NAK, we send an ACK for the last correctly received packet. A sender that receives two ACKs for the same packet (that is, received **duplicate ACKs**) knows that the receiver did not correctly receive the packet following the packet that is being ACKed twice.
 
@@ -161,11 +161,9 @@ connectionSocket, addr = serverSocket.accept();
   - (2) respond to a timer interrupt, and
   - (3) stop the timer.
 
-[image for `rdt3.0` sender (p.215)]
+<img src="./cs456_computer_networks.assets/rdt_3_0_sender.png" width="600px"/>
 
-[image for `rdt3.0` receiver] - homework
-
-[image (p.216)]
+<img src="./cs456_computer_networks.assets/rdt_3_0_operation.png" width="600px"/>
 
 - Note that a receive time for a packet is necessarily later than the send time for a packets as a result of transmission and propagation delays. Because packet sequence numbers alternate between 0 and 1, protocol `rdt3.0` is sometimes known as the **alternating-bit protocol**.
 
@@ -181,7 +179,7 @@ connectionSocket, addr = serverSocket.accept();
 
 - In a __Go-Back-N (GBN) protocol__, the sender is allowed to transmit multiple packets without waiting for an acknowledgement, but is constrained to have no more than some maximum allowable number, N, of unacknowledged packets in the pipeline.
 
-  [image 3.19 p.220]
+  <img src="./cs456_computer_networks.assets/GBN.png" width="600px"/>
 
 - If we define `base` to be the sequence number of the oldest unacknowledged packet and `nextseqnum` to be the smallest unused sequence number (i.e. the sequence number of the next packet to be sent), then four intervals in the range of sequence numbers can be identified.
 
@@ -189,9 +187,7 @@ connectionSocket, addr = serverSocket.accept();
 
 - If $k$ is the number of bits in the packet sequence number field, the range of sequence numbers is thus $[0,2^k - 1]$. With a finite range of sequence numbers, all arithmetic involving sequence numbers must then be done using modulo $2^k$ arithmetic. (That is, the sequence number space can be thought of as a ring of size $2^k$, where sequence number $2^k -1$ is immediately followed by sequence number 0)
 
-  [image extended FSM sender p.221]
-
-  [image extended FSM receiver p.221]
+  <img src="./cs456_computer_networks.assets/GBN_FSM.png" width="600px"/>
 
 - Extended FSM description of sender and receiver sides of an ACK-based, NAK-free, GBN protocol.
 
@@ -214,9 +210,9 @@ connectionSocket, addr = serverSocket.accept();
   - (2) a timer interrupt, and
   - (3) a call from the lower layer to invoke `rdt_rcv()` when a packet arrives.
 
-  ### 3.4.4 Selective Repeat (SR)
+### 3.4.4 Selective Repeat (SR)
 
-  [image 2.23 p.225]
+<img src="./cs456_computer_networks.assets/SR.png" width="600px"/>
 
 - SR sender:
 
