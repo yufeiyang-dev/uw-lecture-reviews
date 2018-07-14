@@ -1,3 +1,5 @@
+> dropped
+
 ## 1. Edge Connectivity
 
 - __Definition:__ A graph $G$ is __k-edge-connected__ if $G-F$ is connected for any $F \subseteq E(G)$ where $|F| \leq k-1$. The __edge-connnectivity__ of $G$ is the largest $k$ for which $G$ is k-edge-connected, denoted $K'(G)$.
@@ -207,3 +209,4 @@
 - **Theorem:** If $G$ is not planar, then $G$ contains a Kuratowski subgraph.
 
   
+
