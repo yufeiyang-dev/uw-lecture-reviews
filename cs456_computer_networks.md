@@ -217,9 +217,200 @@ connectionSocket, addr = serverSocket.accept();
 - SR sender:
 
   - *Data received from above*. When data is received from above, the SR sender checks the next available sequence number for the packet
+  - *Timeout*. Timers are again used to protect against lost packets. However, each packet must now have its own logical timer, since only a single packet will be transmitted on timeout
+  - *ACK received*. If an ACK is received, the SR sender marks that packet as having been received, provided it is in the window. If the packet's sequence number is equal to `send_base`, the window base is moved forward to the unacknowledged packet with the smallest sequence number. If the window moves and there are untransmitted packets with sequence numbers that now fall within the window, these packets are transmitted.
+- SR receiver:
+  - *Packet with sequence number in* `[rcv_base, rcv_base+N-1]` *is correctly received*.
+  - *Packet with sequence number in* `[rcv_base-N, rcv_base-1]` *is correctly received*.
+  - *Otherwise*. Ignore the packet.
 
-  ...
+## 3.5 Connection-Oriented Transport: TCP
 
-## 3.7 TCP Congestion Control
+### 3.5.1 The TCP Connection
+
+- TCP is said to be **connection-oriented** because before one application process can begin to send data to another, the two processes must first "handshake" with each other — that is, they must send some preliminary segments to each other to establish the parameters of the ensuing data transfer.
+- TCP connection provides a **full-duplex service**: If there is a TCP connection between Process A on one host and Process B on another host, then application-layer data can flow from Process A to Process B at the same time as application-layer data flows from Process B to Process A.
+- TCP connection is also alywas **point-to-point**, that is, between a single sender and s single receiver. So-called "multicasting" is not possible with TCP.
+- Because three segments are sent between the two hosts, this connection-establishment procedure is often rederrred to as a **three-way handshake**.
+- The maximum amount of data that can be grabbed and applied in a segment is limited by the **maximum segment size (MSS)**.
+- The MSS is typically set by first determining the length of the largest link-layer frame that can be sent by the local sending host (the so-called **maximum transmission unit, MTU**), and then setting the MSS to ensure that a TCP segment plus the TCP/IP header length will fit into a single line-layer frame.
+
+### 3.5.2 TCP Segment Structure
+
+[image TCP segment structure p.234]
+
+- A TCP segment header contains the following fields:
+  - As with UDP, the header includes **source and destination port numbers**, which are used for multiplexing/demultiplexing data from/to upper-layer applications. Also, as with UDP, the header includes a **checksum field**.
+  - The 32-bit **sequence number field** and the 32-bit **acknowledgement number field** are used by the TCP sender and receiver in implementing a reliable data transfer service.
+  - The 16-bit **receive window** field is used for flow control.
+  - The 4-bit **header length field** specifies the length of the TCP header in 32-bit words.
+  - others
+
+#### Sequence Numbers and Acknowledgement Numbers
+
+[image TCP segments p.236]
+
+- The **sequence number for a segment** is the byte-stream number of the first byte in the segment.
+- Because TCP only acknowledges bytes up to the first missing byte in the stream, TCP is said to provide **cumulative acknowledgement**.
+
+[image TCP telnet example p.238]
+
+- Note that the acknowledgment for client-to-server data is carried in a segment carrying server-to-client data; this acknowledgement is said to be **piggyback** on the server-to-client data segment.
+
+### 3.5.3 Round-Trip Time Estimation and Timeout
+
+#### Estimating the Round-Trip Time
+
+- The sample RTT, denoted `SampleRTT`, for a segment is the amount of time between when the segment is sent (that is, passed to IP) and when an acknowledgement for the segment is received.
+- `EstimatedRTT = ` $(1-\alpha)$ $\cdot$ `EstimatedRTT` + $\alpha$ $\cdot$ `SimpleRTT`
+  - exponential weighted moving average
+  - influence of past sample decreases exponentially fast, typical value: $\alpha = 0.125$
+
+#### Setting and Managing the Retransmission Timeout Interval
+
+- `TimeoutInterval = ` `EstimatedRTT` + 4 $\cdot$ `DevRTT`
+- timeout interval: `EstimatedRTT` plus "safety margin"
+  - large variation in `EstimatedRTT` -> larger safety margin
+
+
+
+==Note: As an experiment, from below, the notes are guided by the slides instead of the textbook==
+
+### 3.5.4 Reliable Data Transfer
+
+- TCP created `rdt` service on top of IP's unreliable service
+  - pipelined segments
+  - cumulative acks
+  - single retransmission timer
+- retransmissions triggered by:
+  - timeout events
+  - duplicate acks
+
+#### TCP sender events
+
+- **data received from application**
+  - create segment with sequence number
+  - sequence number is byte-stream number of first data byte in segment
+  - start timer if not already running
+    - think of timer as for oldest unasked segment
+    - expiration interval: `TimeOutInterval`
+- **timeout**
+  - retransmit segment that caused timeout
+  - restart timer
+- **acknowledgement received**
+  - if acknowledgement acknowledges previously unacknowledged segments
+    - update what is known to be ACKed
+    - start timer if there are still unacknowledged segments
+
+[TCP sender (simplified) (67)]
+
+#### TCP: retransmission scenarios
+
+- lost ACK scenario (68)
+- premature timeout (68)
+- cumulative ACK (69)
+
+#### TCP ACK generation
+
+- (70)
+
+#### TCP fast retransmit
+
+- time-out period often relatively long:
+  - long delay before resending lost packet
+- detect lost segments via duplicate ACKs
+  - sender often sends many segments back-to-back
+  - if segment is lost, there will likely be many duplicate ACKs
+- If sender receives 3 ACKs for same data ("triple duplicate ACKs"), resend unacknowledged segment with smallest sequence number
+  - likely that unacknowledged segment lost, so don't wait fro timeout
+- (72)
+
+### 3.5.5 Flow Control
+
+- receiver controls sender, so sender won't overflow receiver's buffer by transmitting too much, too fast
+- receiver "advertises" free buffer space by including `rwnd` value in TCP header of receiver-to-sender segments
+  - `RcvBuffer` size set via socket options (typical default is 4086 bytes)
+  - many operating systems sutoadjust `RcvBuffer`
+- sender limits amount of unacknowledged ("in-flight") data to receiver's `rwnd` value
+- guarantees receive buffer will not overflow
+
+### 3.5.6 TCP Connection Management
+
+- before exchanging data, sender/receiver "handshake":
+  - agree to establish connection (each knowing the other willing to establish connection)
+  - agree on connection parameters
+- Q: will 2-way handshake always work in network?
+  - variable delays
+  - retransmitted messages (e.g. `req_conn(x)`) due to message loss
+  - message reordering
+  - can't "see" other side
+- [2-way handshake failure scenarios (79)]
+- [TCP 3-way handshake (80)]
+- TCP: closing a connection
+  - client, server each close their side of connection
+    - send TCP segment with FIN bit = 1
+  - respond to received FIN with ACK
+    - on receiving FIN, ACL can be combined with own FIN
+  - simultaneous FIN exchanges can be handled
+- (83)
+
+==Notes: end of experiment==
+
+## 3.6 Principles of Congestion Control
+
+- We conclude this section with a discussion of congestion control in the **available bit-rate (ABR)** service in **asynchronous transfer mode (ATM)** networks.
+
+# Chapter 4: The Network Layer
+
+## 4.1 Introduction
+
+### 4.1.1 Forwarding and Routing
+
+- *Forwarding*. When a packet arrives at a router's input link, the router must move the packet to the appropriate output link. For example, a packet arriving from Host H1 to Router R1 must be forwarded to the next router on a path to H2.
+- *Routing*. The network layer must determine the route out path taken by packets as they flow from a sender to a receiver. The algorithms that calculate these paths are referred to as **routing algorithms**.
+
+## 4.2 Virtual Circuit and Datagram Networks
+
+### 4.2.2 Datagram Networks
+
+- *Longest prefix matching rule*. When looking for forwarding table entry for given destination address, use **longest** address prefix that matches destination address.
+
+## 4.3 What's Inside a Router?
+
+- *Forwarding function*. the actual transfer of packets from a router's incoming links to the appropriate outgoing links at that router.
+- The terms *forwarding* and *switching* are often used interchangeably.
+- In a router:
+  - *Input ports*.
+  - *Switching fabric*.
+  - *Output ports*.
+  - *Routing processor*.
+
+### 4.3.2 Switching
+
+- *Switching via memory*. The simplest, earliest routers were traditional computers, with switching between input and output ports being done under direct control of the CPU (routing processor). Inout and output ports functioned as traditional I/O devices in a traditional operating system. An inout dirt with an arriving packet first singled the routing processor via an interrupt.
+- *Switching via a bus*.
+- *Switching via an interconnection network*.
+
+### 4.3.4 Where Does Queueing Occur?
+
+- HOL
+
+## 4.4 The internet Protocol (IP): Forwarding and Addressing in the Internet
+
+### 4.4.1 Datagram Format
+
+#### IP Datagram Fragmentation
+
+- *Maximum Transmission Unit (MTU).* The maximum amount of data that a link-layer frame can carry.
+
+### 4.4.2 IPv4 Addressing
+
+- *Classless InterDomain Routing (CIDR)*. - `a.b.c.d/x`
+
+#### Obtaining a Host Address: the Dynamic Host Configuration Protocol
+
+- *Dynamic Host Configuration Protocol (DHCP)*.
+
+#### Network Address Translation (NAT)
 
 - 
