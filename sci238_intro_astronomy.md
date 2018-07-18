@@ -1,4 +1,4 @@
-## 12. The Properties of Stars
+## 12. The Properties of Stars [need simplify]
 
 ### Distances to stars (5)
 
@@ -230,3 +230,268 @@ For mroe detailed information	=>	spectra better
 - We can measure the brightness, colour, and spectra of any star that we can see
 - To measure the mass of a star it must be in orbit around another star (binary star)
 - However we <u>**assume**</u> that if two stars are identical in luminosity and spectra then they are identical in mass too.
+
+## 16. Milky Way
+
+### The interstellar medium (3)
+
+- Looking out in some directions we see wide swaths of gas and dust: the interstellar medium
+
+#### What is it made of?
+
+- <u>hydrogen</u>: by far the most common element in the ISM; exists in three states
+- <u>other elements</u> also found i the three states
+- <u>other components</u> of ISM
+  - cosmic rays
+  - magnetic fields
+  - DUST
+
+#### Interstellar Dust
+
+- only ~1%
+- causes extinction (obscuration) of visible light
+- reddens visible light by scattering the bluer photons more
+- 10nm - 200 nm (0.01 - 0.2 μm)
+
+#### Other Effects of Interstellar Dust
+
+- severe depletion of gaseous C, N, O in dusty areas
+- dust grains: chemical reactions
+- dust grains are good infrared radiators
+
+#### <u>Structures</u> in the Interstellar Medium
+
+- <u>diffuse Interstellar Clouds</u>
+- <u>molecular clouds</u>
+- <u>diffuse "Intercloud" medium</u>
+- HII regions: massive, hot, short-lived stars
+- supernova remnants: only ~150 known in the Galaxy
+
+#### <u>Molecular Clouds</u>
+
+- The densest, coolest part of the ISM
+- Measuring mass: most of the mass of the cloud is in hydrogen and helium gas ($H_2$)
+
+#### The cosmic cycle of the elements
+
+- stars are formed from interstellar gas
+- stars convert elements to heavier elements
+- when stars die they put some of this enriched gas back into the interstellar medium
+- next generation of stars formed from more enriched material then previous generation
+- the "metallicity" of the universe is constantly increasing.
+
+### Distance measurements (23)
+
+#### The Distance Scale in the Milky Way
+
+- <u>trigonometric parallax</u>
+- some <u>statistical techniques</u> good for larger distances (to a few kpc?)
+- beyond ~1kpc, for "general" directions, we need to use "standard candles"
+- <u>kinematic distances</u>
+- "standard candles": objects whose intrinsic luminosity (absolute magnitude) is known.
+- combination of `m, M` or `b, L => d`
+- several "standard candles" but main ones are
+
+#### The scale of the Milky Way
+
+- observations of RRLyrae stars i globular clusters in out Galaxy led to the discovery that we (Earth, Sun) are not at the centre of the Galaxy
+- this result was later strengthened by Main Sequence fitting of globular cluster CMDs
+- current estimates is that we are 8 npc (24,000 light years) from the centre
+
+#### disc vs. halo `<->` orbits
+
+- Orbits (speed and distance) are set by mass!
+- objects in the halo regularly pass through the disc
+
+### The structure of the Galaxy (37)
+
+#### Structure of the Milky Way Galaxy
+
+- disk, bulge, halo $\rightarrow$ the largest scale structures in the Galaxy
+- disk has "spiral arms" - bright, patchy features that spiral out from near the centre of the Galaxy to near the edge
+- patchy because of other processes? Large explosions, "superbubbles"
+- interstellar material concentrated in spiral arms, star formation too.
+- shortest-lived stars are very very bright (high mass stars) and concentrated in arms too.
+
+#### "rotation curve": What is it? What does  it tell us?
+
+- a rotation curve is a plot of orbital velocity (rotation) vs distance from centre of mass of the orbit
+  - need to measure both velocity and position of objects at various distances from centre of mass
+  - note: $v_{orbit}$ drops rapidly as distance increases.
+
+#### The Rotation Curve of the Milky Way
+
+- "solid body" in innermost disc; but outside?
+
+#### Mass of the Milky Way: from its rotation curve
+
+- larger mass means a larger orbital velocity to travel in circular orbit at a given distance
+- larger distance (for a fixed mass) requires a smaller velocity for a circular orbit
+- rotation curve of Milky Way is nearly flat (at $v_{rot}$ 200 km/s) out to 20 kpc
+- flat rotation curve implies $\bold{M_{MW} \geq 2 \times 10^{11} M_{Sun}}$ at Sun's distance from the centre
+- studies of the rotation of objects in orbit around the Milky Way, at even larger distances, give masses another factor of 10x greater than this i.e. $\bold{M_{MW} \sim 2 \times 10^{12} M_{Sun}}$
+- the total **visible** mass of the Milky Way is $\bold{\sim 1 \times 10^{11}M_{Sun}}$
+- from orbits (gravity) we detect as much as 10 - 10x more mass than we see!
+
+#### Dark Matter
+
+- What is dark matter? (44)
+
+#### Spiral Density Wave Model
+
+- stars and gas pass through a wave where they slow down, temporarily, as they orbit around the Galaxy
+- this area where the material moves more slowly will therefore have a greater density
+- higher density material responds in a very non-linear fashion
+- for example, the star formation process can begin
+
+### The supermassive black hole at the centre (57)
+
+#### The centre of the Milky Way
+
+- there is evidence of a very massive object at the centre of out Galaxy
+- thought to be a "supermassive black hole"
+
+### Miscellaneous
+
+- Interstellar gas often detected in stellar spectra (9)
+- RRLyrae and Cepheid variable stars have well defined Period, Luminosity relations (26)
+- solid body rotation curve (39)
+- goatitional lenses tell us about mass we cannot see (45)
+
+### Summary (60)
+
+- Our Milky Way consists of
+  - a halo containing most of the (dark) matter
+  - a disk containing most of the visible structure (spiral arms, ISM), and
+  - a small bulge around the centre
+- A supermassive blackhole in the very centre
+
+## 17. Galaxies
+
+### Galaxy types (4)
+
+#### Galaxies: classified by their morphology (appearance/shape)
+
+- <u>spirals</u> (like our own)
+  - nucleus, arms, bar...
+- <u>ellipticals</u>
+  - Elliptical galaxies classified by "ellipticity"
+  - Elliptical galaxies very greatly in size and mass
+- <u>lenticulars</u>
+- <u>barred spiral</u>
+
+#### The Winding Dilemma
+
+- spiral arms (or any other features) in a differentially rotating disk will "wind up" in a few rotation periods. The arms should get very much tighter quickly.
+
+#### Spiral Density Wave Model
+
+- stars and gas pass through a wave where they slow down, temporarily, as they orbit around the Galaxy
+- this area where the material moves more slowly will therefore have a greater density
+- higher density material responds in a very non-linear fashion
+- for example, the star formation process can begin
+
+#### Properties of Galaxies
+
+|                        | Spirals / Barred Spirals                                     | Lenticulars                                   | Ellipticals                           | Irregulars           |
+| ---------------------- | ------------------------------------------------------------ | --------------------------------------------- | ------------------------------------- | -------------------- |
+| Appearance             | flatteneddisk<br />bulge <br />spherical halo <br />spiral arms | disk<br />bulge<br />halo                     | no disk<br />ellipsoidal distribution | no obvious structure |
+| Gas/Dust<br />(mass %) | in disk<br />3-10%                                           | little or none<br />0-1%                      | little or none<br />< 0.1%            | lots<br />10-20%     |
+| stars                  | old in halo; <br />young and old in disk                     | old                                           | old                                   | young and old        |
+| star formation         | in spiral arms                                               | none                                          | noen                                  | vigorous             |
+| stellar motions        | circular orbits in disk;<br />random in halo                 | circular orb its in disk;<br />random in halo | random                                | random               |
+
+### Extragalactic distance scale (27)
+
+#### The Extragalactic Distance Scale
+
+- <u>Cepheid Variable</u> Star (Period-Luminosity Law)
+- <u>Hubble Law</u> - expansion of the Universe
+- <u>Tulley-Fisher</u> (more massive galaxies are more luminous)
+- Type Ia supernova
+
+#### Galaxy radial velocity correlates with distance: $V = H_0d$
+
+- Hubble observed that virtually all galaxies are moving away from out own Milky Way galaxy
+- the distances between galaxies are increasing
+
+#### The Hubble Law: $V = H_0d$
+
+- measures the radial velocities of galaxies using the Doppler shift
+- plot the distance to the galaxies versus their velocities
+  - **Hubble's Constant:** $\bold{H_0}$
+
+#### Using the Hubble Law to determine distance
+
+- mesure the raidal velocity
+- "invert" the equation: $\bold{d=v/H_0}$
+- the galaxy radial velocity is often referred to as **redshift z**
+- z is the fractional change in the measured wavelength: $\bold{z = \Delta\lambda / \lambda}$
+  - z=1 is a **very large change in wavelength**
+
+#### Supernovae (Type Ia)
+
+- the mechanism producing supernovae is well understood - all white-dwarf/binary SN are close to identical...
+- from intensive studies of many supernovae (extragalactic ones) the absolute brightness (the luminosity) of a given supernova can now be determined by plotting its light curve
+- a new standard candle
+
+### Peculiar and active galaxies (35)
+
+#### Peculiar Galaxies
+
+- tidal tail caused by dynamical interaction with another galaxy
+- Starburst galaxy: star formation has been triggered by a merger  between two galaxies
+
+#### Active Galaxies
+
+- active galaxies are those teeth extremely high luminosity
+  - usually most luminous at **radio** wavelengths
+- most extreme are called **quasars**
+  - extremely distant
+    - **must be intrinsically very brght**
+    - **we are looking at them far back in time**
+- large radio structures are an obvious sign of an unusual, active galaxy
+- sometimes there is no such radio structure, bu the galaxy may exhibit unusual spectral characteristics - especially a high luminosity in the infrared wavelengths
+- active galaxies are often bright art many wavelengths
+
+#### Many galaxies are strong radio sources
+
+- plasma emitted from energetic galactic centre moves at nearly the speed of light
+- Radio galaxies: double lobed structure, various scales and shapes
+
+#### Quasars
+
+- quasar spectra have both "thermal" and "non-thermal" components
+- quasars are compact = very luminous **galactic nuclei**
+
+#### AGN model
+
+- supermassive black holes create radio jets via interaction between electrons and strong magnetic fields
+- at the centre is an accretion disc surrounding a supermassive black hole
+- the current model the central "engine" of an active galaxy
+
+### galaxy clusters (53)
+
+#### Galaxy Clusters
+
+- galaxies are found in groups, clusters, superclusters
+- deep images find very many galaxies in som edirections
+- number of galaxies in the universe >> number of stars in the Milky Way
+- Milky Way galaxy in a small group called "**The Local Group**"
+
+#### Examples
+
+- Hickson 67 - a small, compact galaxy group
+- Abell 1185 - a rich galaxy cluster with < $10^2$ members
+
+### Miscellaneous
+
+- Stars and gas closer to centre move faster, creating density waves that can leard to star formation (19)
+- Irregular galaxies have little symmetry, often include gas (25)
+
+### Summary
+
+- Most galaxies are "normal" (ellipticals, spirals, lenticulars, with or without a bar)
+- The Hubble Law can be sued to get distances
+- A small number of galaxies show wildly different characteristics
+- Galaxies are often found in clusters
