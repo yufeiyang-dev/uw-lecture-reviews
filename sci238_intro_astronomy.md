@@ -495,3 +495,165 @@ For mroe detailed information	=>	spectra better
 - The Hubble Law can be sued to get distances
 - A small number of galaxies show wildly different characteristics
 - Galaxies are often found in clusters
+
+## 18. The Expanding Universe
+
+### Galaxy masses (3)
+
+#### galaxy masses
+
+- rotation curve
+- velocity dispersion
+- mitions of galaxies in orbit around each other or in a cluster
+- from measurements of the Doppler Shift we can measure the rate at which galaxies rotate. But the rotation rate is determined by the mass of the galaxy.
+- other spiral galaxies have rotation curves much like the Milky Way's
+
+#### Gravity
+
+- Gravity from an extended object - the force of gravity from a spherical mass the same if the mass is mall or large (in volume)
+- Gravity from an inside an exited object - the force of gravity from inside a spherical mass is zero!
+
+#### Falt rotation curve `=>` mass increase with distance
+
+$G\frac{mM_r}{r^2} = m\frac{v_r^2}{r}$
+
+- $v^2/r$ = acceleration i ncrivular motion
+- $v_r$ is circular velocity at distant $r$ from centre
+
+$M_r = \frac{rv_r^2}{G}$
+
+- Mass within a distance of r calculated from the measured circular velovity
+
+#### Measuring the Mass of a Cluster
+
+- There are three independent ways to measure galaxy cluster mass
+
+#### 1. Galaxy Orbits
+
+- Orbiting Galaxies
+
+#### 2. Hot gas between galaxies - intraclyster medium
+
+- Hot ($10^7-10^8K$) gas between galaxies emits X-rays
+- from the X-ray spectrum, we can calculate the termperature
+- temperature tells us the average speed of the gas particles
+- again, we can estimate mass `->` the mass required to retain the hot gas
+
+#### 3. Lensing
+
+- the angle at which the light is bent depends the mass of the cluster
+- all previous methods for finding mass depended on Newton's Law of Gravity
+
+#### Gravitational Lensing
+
+- The amount of lensing depends on the mass of the objects acting as a lends $\rightarrow$ another way to measure the mass
+- **<u>Strong lensing</u>**: makes large distorted images. But needs good alignment
+- **<u>Weak lensing</u>**: a more subtle effect, look for statistical effects - much more common, but harder to measure.
+
+#### Mass-to-Light Ratio
+
+- is the mass of a galaxy divided by its luminosity
+- Within the orbit of the Sun, $M/L = 6 M_{Sun}/L_{Sun}$ for the Milky Way
+- However, when we include the outer regions of galaxies
+  - $M/L$ increase dramatically
+- Thus we conclude that most matter in galaxies is not stars
+  - The amount of $M/L$ over $6M_{Sun}/L_{Sun}$ is the amount of **dark matter**
+
+#### Galaxy and Cluster Masses: dark matter
+
+- The cluster masses which are measured by all three of these independent methods agree
+- There are only two possible explanations for this
+  - we do not understand gravity on galaxy and cluster sized scales
+  - dark mattter
+
+#### What is Dark Matter Made Of?
+
+- dark matter *could* be made out of protons, neutrons & electrons (i.e. **baryonic matter**)
+- some or all of dark matter could be made of particles which we have yet to discover (i.e. **non-baryonic matter**)
+- **<u>dark matter</u> is found in the <u>halo</u> and far beyond the luminous regions of galaxies**
+
+#### An Extraordinary Matter Candidate
+
+- neutrinos
+- what is there existed *massive* weakly interacting particles? WIMPs
+
+### "look-back time" (32)
+
+#### the Hubble Law: $v = H_0d$, redshift and time
+
+- when we look at very distant objects we are also looking at them, as as they were when they emitted the light that we see now, and they are so far away that this light was emitted long ago `=>` **we are looking back in time.**
+
+### Are we at the centre of the Universe? (34)
+
+#### does the Hubble Law suggest we are at the centre of the Universe?
+
+- No: a uniformly expanding Universe gives the same result (i.e. that more distant objects recede faster)
+- but will the Universe continue to expand?
+- gravity must act to slow the expansion. Is it enough to stop the expansion, and to cause the Universe to collapse again?
+
+#### The scale of the Universe if growing
+
+- Choose a useful scale (average distance between galaxies? Average size of voids between cosmic filaments? Average density of the Universe?)
+  - **distance scales grow with time**
+- **When did it start?** When was the distance scale at zero? It depends on how fast the Universe is  expanding.
+- **The universe used to be much smaller. OR, Things used to be much closer together**
+
+### The **Big Bang** and the age of the Universe (39)
+
+#### What is the age of the Universe that we get from the Hubble constant?
+
+- 
+
+#### The expansion of the Universe
+
+- Has the expansion been constant?
+- There is mass in the Universe `->` there is gravity
+- Gravity acts to pull things together
+- If the expansion of the Universe pulls the galaxies apart then the galaxies can pull back - and gravity does the pulling
+- So the **expansion should get slower in the future**, and the **expansion must have been faster in the past**.
+
+#### The Big Bang
+
+- we believe that the expansion of the Universe if being slowed by gravity
+
+#### the Critical Density
+
+- we have seen that gravitational attraction between galaxies can overcome the expansion of the Universe in **localized** regions
+- we refer to the mass density required for this gravitational pull to equal the kinetic energy of the Universe as the **critical density**.
+- the value of $H_0$ tells us the current kinetic energy of the Universe
+- this line of reattach suggests the Universe will expand forever!
+
+#### the Hubble constant and the Age of A "flat" Universe
+
+- in an <u>empty</u> Universe the age is $1/H_0=13.8 \ Gy$ for $H_0=71 \ km/s \cdot Mpc$
+- in a <u>flat</u> Universe (at critical density) the age is $2/3 \times 1/H_0 = 9.2$ billions years.
+
+#### Does Gravity alone Influence the Expansion?
+
+- recent observations of white dwarf supernovae in very distant galaxies (to $z \geq 1$) have yielded unexpected results.
+- **there must be an, as yet unknown, force which repels the galaxies, a dark energy.**
+
+### The future expansion of the Universe (57)
+
+#### four Models for the Future of the Universe
+
+1. **Recollapsing Universe**: the expansion will someday halt and reverse
+2. **Critical Universe**: will not collapse, but will expand more slowly with time
+3. **Coasting Universe**: will expand forever with little slowdown
+4. **Accelerating Universe**: the expansion will accelerate with time (currently favoured)
+
+### Miscellaneous
+
+- Mass of luminous matter (mainly stars) is not enough to match rotation curve (9)
+- Spectral line isthmus of a galaxy `->` rotation rate `->` mass (10)
+- Expansion is a kind of "clock": masses that are far apart now were once much closer (37)
+
+### Summary
+
+- The Universe is rapidly expanding - it was smaller and denser in the past
+- Measurements of the masses of galaxies and galaxy clusters show they have dark matter (extra mass)
+- More mass will slow down the Universe's expansion
+- The initial expansion must have been very fast - like an explosion! We call this beginning **the Big Bang**
+- But recent observations (Type Ia supernovae) have shown that the universe's expansion is accelerating
+- We do not know what causes this acceleration!
+  - We call this "cause": **Dark Energy**
