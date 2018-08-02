@@ -657,3 +657,7 @@ $M_r = \frac{rv_r^2}{G}$
 - But recent observations (Type Ia supernovae) have shown that the universe's expansion is accelerating
 - We do not know what causes this acceleration!
   - We call this "cause": **Dark Energy**
+
+### Questions
+
+- What does "flat" mean?
