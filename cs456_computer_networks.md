@@ -366,7 +366,7 @@ connectionSocket, addr = serverSocket.accept();
 
 ### 4.1.1 Forwarding and Routing
 
-- *Forwarding*. When a packet arrives at a router's input link, the router must move the packet to the appropriate output link. For example, a packet arriving from Host H1 to Router R1 must be forwarded to the next router on a path to H2.
+- *Forwarding*. When a packet arrives at a router's input link, the router must move the packet to the appropriate output link. Refers to the router-local action of transferring a packet from an input link interface to the appropriate output link interface. 
 - *Routing*. The network layer must determine the route out path taken by packets as they flow from a sender to a receiver. The algorithms that calculate these paths are referred to as **routing algorithms**.
 
 ## 4.2 Virtual Circuit and Datagram Networks
@@ -387,7 +387,7 @@ connectionSocket, addr = serverSocket.accept();
 
 ### 4.3.2 Switching
 
-- *Switching via memory*. The simplest, earliest routers were traditional computers, with switching between input and output ports being done under direct control of the CPU (routing processor). Inout and output ports functioned as traditional I/O devices in a traditional operating system. An inout dirt with an arriving packet first singled the routing processor via an interrupt.
+- *Switching via memory*. The simplest, earliest routers were traditional computers, with switching between input and output ports being done under direct control of the CPU (routing processor). Input and output ports functioned as traditional I/O devices in a traditional operating system. An inout dirt with an arriving packet first singled the routing processor via an interrupt.
 - *Switching via a bus*.
 - *Switching via an interconnection network*.
 
