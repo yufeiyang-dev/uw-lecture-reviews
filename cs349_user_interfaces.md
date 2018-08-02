@@ -113,3 +113,7 @@
 
 ## 3.0 Model-View-Controller
 
+## 4.0 Mobile UI
+
+#### Device Characteristics
+
