@@ -231,7 +231,7 @@ For mroe detailed information	=>	spectra better
 - To measure the mass of a star it must be in orbit around another star (binary star)
 - However we <u>**assume**</u> that if two stars are identical in luminosity and spectra then they are identical in mass too.
 
-## 16. Milky Way
+## 16. Milky Way [further review]
 
 ### The interstellar medium (3)
 
@@ -366,7 +366,7 @@ For mroe detailed information	=>	spectra better
   - a small bulge around the centre
 - A supermassive blackhole in the very centre
 
-## 17. Galaxies
+## 17. Galaxies [further review]
 
 ### Galaxy types (4)
 
@@ -496,7 +496,7 @@ For mroe detailed information	=>	spectra better
 - A small number of galaxies show wildly different characteristics
 - Galaxies are often found in clusters
 
-## 18. The Expanding Universe
+## 18. The Expanding Universe [further review]
 
 ### Galaxy masses (3)
 
@@ -661,3 +661,17 @@ $M_r = \frac{rv_r^2}{G}$
 ### Questions
 
 - What does "flat" mean?
+
+## 19. The Big Bang
+
+### The Big Bang Model (3)
+
+#### Evidence for the Big Bang Model
+
+- a good scientific model should make predictions which can be verified.
+- the Big Bang model makes two predictions which have been verified since the 1960s
+
+### The early evolution of the Universe
+
+### Problems
+
