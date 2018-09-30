@@ -2,7 +2,7 @@
 
 ## 1. Intro to AI
 
-> Lecture 1 (2018-9-10)
+> ==Lecture 1 (2018-9-10)==
 
 ###Administrations 
 
@@ -10,7 +10,7 @@
 
 ### Definitions of AI
 
-> Lecture 2 (2018-9-12)
+> ==Lecture 2 (2018-9-12)==
 
 - Turing Test - Imitation Game
 - **Two approaches towards AI**
@@ -38,7 +38,7 @@
 ### Definition of a Search Problem
 
 - *CQ: Why search? (p.11) - AC*
-- <u>example - see posted illustration (search problem)</u>
+- ![Screen Shot 2018-09-30 at 17.29.06](cs486_intro_to_artificial_intelligence.assets/Screen Shot 2018-09-30 at 17.29.06.png)
   - successor function might not be natural (arbitrary), e.g. N-Queens Problem, a queen can attack queens from random positions
   - successor function can have impact on complexity, e.g. how many states are there towards the right goal
 
@@ -46,7 +46,7 @@
 
 #### 8-Puzzle
 
-- <u>example - see posted illustration (8-puzzle)</u>
+- ![Screen Shot 2018-09-30 at 17.29.13](cs486_intro_to_artificial_intelligence.assets/Screen Shot 2018-09-30 at 17.29.13.png)
 
 - *CQ: 8-Puzzle (p.16) - A*
 
@@ -56,7 +56,7 @@
 
 #### River Crossing Puzzle
 
-- <u>example - see posted illustration (river crossing puzzle)</u>
+- ![Screen Shot 2018-09-30 at 17.29.18](cs486_intro_to_artificial_intelligence.assets/Screen Shot 2018-09-30 at 17.29.18.png)
 
 - *CQ: River Crossing Puzzle (p.19) - C*
   - goal state does not have to be valid (logically for the specific question, e.g. boat on the left side)
@@ -66,7 +66,7 @@
 
 #### 4-Queens Problem
 
-- <u>example - see posted illustration (4-queens problem)</u>
+- ![Screen Shot 2018-09-30 at 17.29.25](cs486_intro_to_artificial_intelligence.assets/Screen Shot 2018-09-30 at 17.29.25.png)
 
 - *CQ: Incremental Formulation A (p.23) - D*
   - $16 \times 15 \times 14 \times 13 = 43680$
@@ -77,25 +77,25 @@
 
 ## 3. Uniformed Search
 
->  Lecture 3 (2018-9-17)
+>  ==Lecture 3 (2018-9-17)==
 
 ### Uniformed Search
 
 #### Breadth-First Each on River Crossing
 
-- <u>example - posted note</u>
-- *CQ: Is BFS complete? (p.13) - C*
+![Screen Shot 2018-09-19 at 14.34.40](cs486_intro_to_artificial_intelligence.assets/Screen Shot 2018-09-19 at 14.34.40.png)
 
+- *CQ: Is BFS complete? (p.13) - C*
 - *CQ: Space complexity of BFS (p.14) - B*
 - *P.15 - 5 (3?)*
 
 #### Depth-First Each on River Crossing
 
-- <u>example - posted note</u>
+![Screen Shot 2018-09-19 at 14.34.47](cs486_intro_to_artificial_intelligence.assets/Screen Shot 2018-09-19 at 14.34.47.png)
+
 - *CQ: Is DFS complete? (p.18) - D*
 - *CQ: Space complexity of DFS (p.19) - C*
   - stack, find the longest
-
 - *P.20 - 1*
 - *P.21* - no cycles, gonna be exponential <u>???</u>
 - Comparison: BFS more complete, both not very optimal, both bad time complexity, DFS better space complexity
@@ -105,9 +105,9 @@
 
 #### Iterative-Deepening Search
 
-- <u>example - iterative-deepening search</u>
-- *P.28 - Is it too costly?* - no, time complexity is bounded
+![Screen Shot 2018-09-19 at 14.34.54](cs486_intro_to_artificial_intelligence.assets/Screen Shot 2018-09-19 at 14.34.54.png)
 
+- *P.28 - Is it too costly?* - no, time complexity is bounded
 - *CQ: Comparing IDS and DFS? (p.30) - A*
   - IDS is too iterative
 
@@ -115,14 +115,17 @@
 
 ## 4. Informed Search
 
-> Lecture 4 (2018-9-19)
+> ==Lecture 4 (2018-9-19)==
 
 ### Using Domain Specific Knowledge
 
 - p.8, p.9 <u>???</u>
-- <u>example</u>
+
+- ![Screen Shot 2018-09-30 at 19.47.07](cs486_intro_to_artificial_intelligence.assets/Screen Shot 2018-09-30 at 19.47.07.png)
 
 ### Lowest-Cost-First Search
+
+- ![Screen Shot 2018-09-30 at 19.47.47](cs486_intro_to_artificial_intelligence.assets/Screen Shot 2018-09-30 at 19.47.47.png)
 
 - Complete? Not in general.
 - Optimal? Yes, if every arc cost exceeds $\epsilon > 0$ and the branching factor $b$ is finite. 
@@ -134,24 +137,22 @@
 #### Greedy Search
 
 - Complete? no
-
 - Optimal? no
 - Time/Space complexity: bad, search is unpredictable
-
 - *CQ: Is Greedy Search Complete? (p.18) - A*
 
-- <u>example - greedy not complete</u>
+- ![Screen Shot 2018-09-30 at 16.04.55](cs486_intro_to_artificial_intelligence.assets/Screen Shot 2018-09-30 at 16.04.55.png)
   - search tree & search graph <u>???</u>
 
 - *CQ: Is Greedy Search Optimal? (p.19) - A*
-- <u>example - greedy not optimal</u>
+- ![Screen Shot 2018-09-30 at 16.04.57](cs486_intro_to_artificial_intelligence.assets/Screen Shot 2018-09-30 at 16.04.57.png)
 
 #### A* Search
 
 - Lowest-Cost-First search is a special case of A*, with h(n) = 0
 - g(n) - start to current node
 
-- <u>example - search example (printed)</u>
+- ![Screen Shot 2018-09-30 at 19.47.52](cs486_intro_to_artificial_intelligence.assets/Screen Shot 2018-09-30 at 19.47.52.png)
   - greedy - g, lowest first - h, A* - total
 
 #### Iterative Deepening A*
@@ -253,37 +254,19 @@
 
 > ==Lecture 6 (2018-9-26)==
 
-- <u>example - note for Arc Consistency</u> <u>???</u>
+- ![Screen Shot 2018-09-30 at 19.48.12](cs486_intro_to_artificial_intelligence.assets/Screen Shot 2018-09-30 at 19.48.12.png)
 
 - *CQ: Number of Items in the Queue (p.35) - D*
-
   - see example (queue)
 
 - *CQ: Adding an Arc into the Queue (p.36) - B*
-
-  - we do not add back arcs involving the same constraint and a different variable
-
-    - If (B, A < B) was **not** consistent before, it was in the queue. No need to add it again.
-
-    - If (B, A < B) was consistent before, we will show that (B, A < B) is still consistent after.
-
-      > Proof by contradiction:
-      >
-      > - Suppose (B, A < B) is not consistent after.
-      >
-      > - A value of B could only satisfy the constraint if A takes the dropped value.
-      >
-      > - But we dropped the value of A because there were no values of B that satisfy the constraint when A takes the dropped value.
-      >
-      >   contradiction. QED.
-
-  - <u>(above in posted note, hopefully)</u>
+  - ![Screen Shot 2018-09-30 at 19.48.21](cs486_intro_to_artificial_intelligence.assets/Screen Shot 2018-09-30 at 19.48.21.png)
 
 ## 6. Constraint Satisfaction Problems: Backtracking Search
 
 #### Searching for a solution to a CSP
 
-- <u>example - note</u>
+- ![Screen Shot 2018-09-30 at 19.48.29](cs486_intro_to_artificial_intelligence.assets/Screen Shot 2018-09-30 at 19.48.29.png)
 
 - How many successor states are there for any state?
 
@@ -315,10 +298,10 @@
 
 - *CQ: Applying the least-constraining-value heuristic (p.11) - B*
   - 2: rule out 3 possibilities; 3: rule out 2 possibilities (draw)
-  - <u>example?</u>
+  - ![Screen Shot 2018-09-30 at 19.48.33](cs486_intro_to_artificial_intelligence.assets/Screen Shot 2018-09-30 at 19.48.33.png)
 
 #### Interleaving search and inferences
 
 - <u>??? did not follow</u>
 
-- <u>example - forward checking (on same page with above example)</u>
+- ![Screen Shot 2018-09-30 at 19.48.37](cs486_intro_to_artificial_intelligence.assets/Screen Shot 2018-09-30 at 19.48.37.png)
