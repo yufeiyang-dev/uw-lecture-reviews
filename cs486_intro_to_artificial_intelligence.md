@@ -164,7 +164,7 @@
 #### Examples of Heuristic Functions
 
 - *CQ: Is this heuristic admissible? (p.28) - B*
-  - $h(n) > h*(n)$, example: 1000 $\rightarrow$ 1111, <u>???</u>
+  - $h(n) > h^*(n)$, example: 1000 $\rightarrow$ 1111
 
 #### Constructing an Admissible Heuristic
 
@@ -305,3 +305,57 @@
 - <u>??? did not follow</u>
 
 - ![Screen Shot 2018-09-30 at 19.48.37](cs486_intro_to_artificial_intelligence.assets/Screen Shot 2018-09-30 at 19.48.37.png)
+
+
+
+> ==Lecture 7 (2018-10-1)==
+
+#### Quiz 2
+
+- Q4 & Q5 (on posted sheet)
+- ![lec7-1](cs486_intro_to_artificial_intelligence.assets/lec7-1.png)
+
+#### Backtrack Alg
+
+- ![lec7-2](cs486_intro_to_artificial_intelligence.assets/lec7-2.png)
+
+## 7. Constraint Satisfaction Problems: Local Search
+
+### Introduction to Local Search
+
+- Local Search (p.7)
+
+- neighbour relation -> successor function
+
+#### 4-Queens Problem
+
+- ![lec7-3](cs486_intro_to_artificial_intelligence.assets/lec7-3.png)
+
+- ![lec7-4-8435351](cs486_intro_to_artificial_intelligence.assets/lec7-4-8435351.png)
+- ![lec7-5](cs486_intro_to_artificial_intelligence.assets/lec7-5.png)
+
+- ![lec7-6](cs486_intro_to_artificial_intelligence.assets/lec7-6.png) 
+
+#### Choosing the Neighbour Relation
+
+- bigger neighbourhoods:
+  - good steps, but each step is more expensive
+- smaller neighbourhoods:
+  - each step is OK, but we can take a lot of steps fast
+
+#### Traveling Salesperson Problem
+
+- ![lec7-7](cs486_intro_to_artificial_intelligence.assets/lec7-7.png)
+
+### Local Search Algorithms
+
+#### Hill climbing
+
+- thick fog - cannot look far
+
+- amnesia - no memory
+- *CQ: Will hill climbing find the global optimum? (p.15) - B*
+- ![lec7-8](cs486_intro_to_artificial_intelligence.assets/lec7-8.png)
+- *CQ: Is this state a local optimum? (p.17) - B*
+- *CQ: Is this state a local optimum? (p.18) - A*
+
