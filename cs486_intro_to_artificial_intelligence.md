@@ -331,7 +331,7 @@
 
 - ![lec7-3](cs486_intro_to_artificial_intelligence.assets/lec7-3.png)
 
-- ![lec7-4-8435351](cs486_intro_to_artificial_intelligence.assets/lec7-4-8435351.png)
+- ![lec7-4-8435351](cs486_intro_to_artificial_intelligence.assets/lec7-4.png)
 - ![lec7-5](cs486_intro_to_artificial_intelligence.assets/lec7-5.png)
 
 - ![lec7-6](cs486_intro_to_artificial_intelligence.assets/lec7-6.png) 
